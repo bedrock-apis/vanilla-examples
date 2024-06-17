@@ -1,0 +1,9 @@
+{
+   "contents": [
+      ".github/workflows/push_request.yml",
+      "contents.json",
+      "generate.contents.js",
+      "README.md"
+   ],
+   "modules": []
+}
