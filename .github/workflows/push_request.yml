@@ -11,12 +11,14 @@ jobs:
         steps:
             - name: Checkout Repository
               uses: actions/checkout@v4
+              with: 
+                ref: $GITHUB_REF
 
             - name: Setup Node.js
               uses: actions/setup-node@v3
 
-            - uses: actions/checkout@v4
-            - run: |
+            - name: Running Clean Up Code
+              run: |
                 node ./.github/generate.contents.js
                 git config user.name "github-actions[bot]"
                 git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
