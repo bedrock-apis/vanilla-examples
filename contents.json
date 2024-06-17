@@ -1,11 +1,11 @@
 {
-   "date": 1718638280103,
+   "date": 1718640186857,
    "contents": [
       ".github/generate.contents.js",
       ".github/workflows/push_request.yml",
+      "README.md",
       "contents.json",
-      "modules/test.json",
-      "README.md"
+      "modules/test.json"
    ],
    "modules": [
       "modules/test.json"
