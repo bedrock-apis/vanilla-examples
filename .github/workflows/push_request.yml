@@ -9,17 +9,13 @@ jobs:
         name: Build Check
         runs-on: ubuntu-latest
         steps:
-            - name: Checkout Repository
-              uses: actions/checkout@v4
-
             - name: Setup Node.js
               uses: actions/setup-node@v3
 
-            - name: Node Run Code
-              run: node ./.github/generate.contents.js
-
-            - uses: actions/checkout@v4
+            - name: Checkout Repository
+              uses: actions/checkout@v4
             - run: |
+                node ./.github/generate.contents.js
                 git config user.name "github-actions[bot]"
                 git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
                 git add .
