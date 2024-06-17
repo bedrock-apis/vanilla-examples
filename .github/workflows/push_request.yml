@@ -16,8 +16,8 @@ jobs:
               uses: actions/setup-node@v3
 
             - name: Node Run Code
-              run: node .
-              
+              run: node ./.github/generate.contents.js
+
             - uses: actions/checkout@v4
             - run: |
                 git config user.name "github-actions[bot]"
