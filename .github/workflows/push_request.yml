@@ -13,6 +13,7 @@ jobs:
       - name: Checkout Repository
         run: |
          echo hello
+         test False
 
   generation:
     name: Content Generator
