@@ -1,0 +1,28 @@
+name: After Push Generator
+
+on: 
+  push:
+
+permissions: write-all
+
+jobs:
+  generation:
+    name: Content Generator
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with: 
+          ref: ${{github.head_ref}}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        
+      - name: Running Clean Up Code
+        run: |
+            node ./.github/generate.contents.js
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add .
+            git commit -m "generated"
+            git push
