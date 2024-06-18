@@ -1,14 +1,18 @@
 {
-   "date": 1718705958052,
-   "contents": [
-      ".github/generate.contents.js",
-      ".github/workflows/pull_request.yml",
-      ".github/workflows/push.yml",
-      "README.md",
-      "contents.json",
-      "modules/test.json"
-   ],
-   "modules": [
-      "modules/test.json"
-   ]
+    "contents": [
+        "./.github/scripts/functions.js",
+        "./.github/scripts/generate.js",
+        "./.github/scripts/index.js",
+        "./.github/workflows/content_generator.yml",
+        "./.github/workflows/type_checker.yml",
+        "./.gitignore",
+        "./contents.json",
+        "./decleration.tests.d.ts",
+        "./modules/test.js",
+        "./package.json",
+        "./README.md"
+    ],
+    "modules": [
+        "test.js"
+    ]
 }
