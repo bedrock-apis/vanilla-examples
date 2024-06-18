@@ -19,9 +19,10 @@ const content = {
 
 const newData = JSON.stringify(content, null, 4);
 if(!bypass){
-    const data = fs.readFileSync("./contents.json");
+    const data = fs.readFileSync("./contents.json").toString();
     if(newData !== data) {
         console.error("Contents are not up to date!");
+        console.log(newData, data);
         process.exit(1);
     }
 }
