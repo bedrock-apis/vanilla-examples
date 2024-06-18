@@ -1,0 +1,19 @@
+name: Content Generator
+
+on: 
+    pull_request:
+      branches: [ main ]
+jobs:
+  generation:
+    name: Content Generated
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        
+      - name: Running Clean Up Code
+        run: |
+            npm run generate-check
