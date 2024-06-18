@@ -7,7 +7,15 @@ on:
 permissions: write-all
 jobs:
   check:
-    name: Build Check
+    name: Marge Check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        run: |
+         echo hello
+
+  generation:
+    name: Content Generator
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
