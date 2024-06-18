@@ -11,7 +11,7 @@ const contents = [...getFiles(".")].filter(e=>
     !e.startsWith("./.git/") &&
     !e.startsWith("./node_modules/") &&
     !e.endsWith("package-lock.json")
-);
+).sort();
 const content = {
     contents,
     modules: contents.filter(e=>e.startsWith("./modules")).map(e=>e.slice(10))

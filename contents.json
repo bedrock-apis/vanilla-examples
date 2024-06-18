@@ -6,11 +6,11 @@
         "./.github/workflows/content_generator.yml",
         "./.github/workflows/type_checker.yml",
         "./.gitignore",
+        "./README.md",
         "./contents.json",
         "./decleration.tests.d.ts",
         "./modules/test.js",
-        "./package.json",
-        "./README.md"
+        "./package.json"
     ],
     "modules": [
         "test.js"
