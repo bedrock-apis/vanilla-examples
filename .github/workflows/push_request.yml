@@ -5,15 +5,16 @@ on:
     branches: [ main ]
 
 permissions: write-all
+
 jobs:
   check:
-    name: Marge Check
+    name: Check
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
         run: |
          echo hello
-         test False
+         exit 1
 
   generation:
     name: Content Generator
