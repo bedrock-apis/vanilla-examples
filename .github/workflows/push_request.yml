@@ -7,15 +7,6 @@ on:
 permissions: write-all
 
 jobs:
-  check:
-    name: Check
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repository
-        run: |
-         echo hello
-         exit 1
-
   generation:
     name: Content Generator
     runs-on: ubuntu-latest
@@ -36,3 +27,11 @@ jobs:
           git add .
           git commit -m "generated"
           git push
+  check:
+    name: Check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        run: |
+         echo hello
+         exit 0
