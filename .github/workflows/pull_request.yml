@@ -3,7 +3,6 @@ name: Pull Request Check
 on: 
   pull_request:
     branches: [ main ]
-  merge_group:
 
 jobs:
   check:
